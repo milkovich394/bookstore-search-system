@@ -38,7 +38,7 @@ namespace kr_MiSPISiT
         {
             dataGridView1.Rows.Clear();
             db.OpenConnection();
-            //замена id на значение 
+            
             string sql = "SELECT DISTINCT shops.`shop name`, shops.address, shops.phone FROM shops, kr_shops.books, kr_shops.authors,  kr_shops.genres,  kr_shops.shops_has_books WHERE shops.id = shops_has_books.shops_id AND books.id = genres.books_id AND shops_has_books.books_id = books.id AND genres.`genre name`= '"+genre+"' AND books.authors_id = authors.id; ";
 
             command = new MySqlCommand(sql, db.GetConnection());
