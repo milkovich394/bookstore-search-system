@@ -235,7 +235,7 @@ namespace kr_MiSPISiT
             msda.Fill(dt);
 
             MySqlDataReader reader = command.ExecuteReader();
-            StreamWriter sr = new StreamWriter("C:/Users/Ann/Desktop/kr_MiSPISiT/otchet_shops");
+            StreamWriter sr = new StreamWriter("/kr_MiSPISiT/otchet_shops"); // file path
             while (reader.Read())
             {
                 sr.Write(reader[0].ToString() + "\t" + reader[1].ToString() + "\t" + reader[2].ToString()+"\t"+ reader[3].ToString() + "\t" + reader[4].ToString()+"\n");
