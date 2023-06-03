@@ -35,7 +35,7 @@ namespace kr_MiSPISiT
         {
             dataGridView1.Rows.Clear();
             db.OpenConnection();
-            //замена id на значение 
+            
             string sql = "SELECT `author name`, country FROM kr_shops.authors;";
 
             command = new MySqlCommand(sql, db.GetConnection());
